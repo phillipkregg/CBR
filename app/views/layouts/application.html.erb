@@ -11,16 +11,17 @@
     <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
     <%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
     <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->
-    <%= stylesheet_link_tag 'custom', :media => 'screen' %>
-  
-  	<%= javascript_include_tag 'jquery-1.6.4.js' %>
+    <%= stylesheet_link_tag 'custom', :media => 'screen' %>  	
+  	
+  	<%= javascript_include_tag :defaults %>  	
   	<%= javascript_include_tag 'jquery.dataTables.js' %>
+  	
 </head>
 <body>
 	<div class="container">
 		<nav class="round">
 	      <ul>
-	        <li><%= link_to "Client List", '#', :class => 'nav_button' %></li>
+	        <li><%= link_to "Client List", root_path, :class => 'nav_button' %></li>
 	        <li><%= link_to "Jobs List", '#', :class => 'nav_button' %></li>
 	        <li><%= link_to "Master Contacts", '#', :class => 'nav_button' %></li>
 	        <li><%= link_to "Quick Reference Guides", '#', :class => 'nav_button' %></li>
@@ -28,8 +29,15 @@
 	      </ul>
 	    </nav>
 		
-		<section class="round" style="clear: both;">
+			
+		
+		<section class="round" style="clear: both;">			
+			
+			
 			<%= yield %>
+		
+			
+
 		</section>
 	</div>
 
