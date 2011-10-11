@@ -1,0 +1,35 @@
+
+
+<div class="center">
+<%= form_for(:client, :url => {:action => 'create'}) do |f| %>
+	
+	<ul>
+		<li>
+			Name:<br/>
+			<%= f.text_field(:name) %>
+		</li>
+		<li>
+			Client Type:<br/>
+			<%= f.text_field(:client_type) %>
+		</li>
+		<li>
+			Account/Program:<br/>
+			<%= f.text_field(:program) %>
+		</li>
+		<li>
+			Geo Location:<br/>
+			<%= f.text_field(:location) %>
+		</li>
+	</ul>
+
+	<div>
+		<ul>		
+			<li class="left"><%= submit_tag "Create Client", :class => '' %> </li>
+			<li><%= button_to "Cancel", '#', :class => 'close'  %>	</li>
+		</ul>
+	</div>
+	
+<% end %>
+
+</div>
+

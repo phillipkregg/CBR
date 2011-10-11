@@ -1,0 +1,48 @@
+<script type="text/javascript">
+	$(document).ready(function() {
+    $('#example').dataTable();
+} );
+</script>
+
+<h2>Clients</h2>
+
+<p>
+<%= link_to "New Client", new_client_path, :remote => true, :class => "new_button round" %>
+</p>
+
+			
+<div>
+	<table cellpadding="0" cellspacing="0" border="0" class="display" id="example">
+		<thead>
+			<tr>			
+				<th>Client Name</th>
+				<th>Client Type</th>
+				<th>Account/Program</th>			
+				<th>Geo Location</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @clients.each do |client| %>
+				<tr>
+					<td><%= client.name %></td>
+					<td><%= client.client_type %></td>
+					<td><%= client.program %></td>
+					<td><%= client.location %></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+	
+			
+			
+			<div id="modal-container">
+				<div id="modal" class="round">
+							  		
+				</div>
+			</div>
+			
+			
+	
+</div>
+
+
